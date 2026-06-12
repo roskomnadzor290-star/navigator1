@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ответы на возражения и Личное развитие</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --primary-color: #1a365d;
+            --accent-color: #00b4d8;
+            --text-color: #2d3748;
+            --card-bg: #ffffff;
+            --warning-color: #e63946;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background-color: var(--card-bg);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.3);
+        }
+
+        .page-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .objection-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .objection-header {
+            padding: 18px 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            background-color: #fff;
+            transition: background 0.2s;
+        }
+
+        .objection-header:hover {
+            background-color: #f9fbfd;
+        }
+
+        .objection-header::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .objection-item.open .objection-header::after {
+            transform: rotate(180deg);
+        }
+
+        .objection-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #fafbfc;
+        }
+
+        .objection-body {
+            padding: 20px;
+            border-top: 1px solid #edf2f7;
+        }
+
+        .script-box {
+            background-color: #e0f2fe;
+            border-left: 4px solid #0284c7;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <h1>Развитие и Навигатор Возражений</h1>
+        <p>Практическое руководство по работе со сложными клиентами и внутренним ростом</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Меню -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="switchPage('main')">🏠 Главная</button>
+            <button class="tab-btn" onclick="switchPage('roskom')">🛡️ Роскомнадзор</button>
+            <button class="tab-btn" onclick="switchPage('rosfin')">💼 Росфинмониторинг</button>
+        </div>
+
+        <!-- ================= СТРАНИЦА: ГЛАВНАЯ ================= -->
+        <div id="page-main" class="page-section active">
+            <h2 class="section-title">Добро пожаловать в базу знаний</h2>
+            <p>Этот сайт создан как интерактивный инструмент для преодоления барьеров в коммуникации и укрепления внутренней уверенности.</p>
+            
+            <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-top: 20px;">
+                <h3>💡 Личное развитие: Настрой перед переговорами</h3>
+                <p>Любое возражение клиента — это не отказ лично вам. Это либо страх, либо нехватка информации. Прежде чем открыть нужный этап, сделайте глубокий вдох и примите позицию «Помощника», а не «Продавца».</p>
+            </div>
+        </div>
+
+        <!-- ================= СТРАНИЦА: РОСКОМНАДЗОР ================= -->
+        <div id="page-roskom" class="page-section">
+            <h2 class="section-title">Этап: Роскомнадзор</h2>
+            <p>Здесь собраны ключевые возражения, возникающие при взаимодействии в плоскости Роскомнадзора, и готовые речевые модули.</p>
+
+            <!-- Возражение 1: Клиент думает, что тянут время -->
+            <div class="objection-item" style="border-left-color: var(--warning-color);">
+                <div class="objection-header" onclick="toggleObjection(this)">
+                    <span style="color: var(--warning-color); font-weight: bold;">⚠️ Клиент думает: «Тянет время» / Почему так долго?</span>
+                </div>
+                <div class="objection-content">
+                    <div class="objection-body">
+                        <strong>Суть ситуации:</strong> Клиент торопится или не понимает критической важности соблюдения официального регламента.
+                        <div class="script-box" style="background-color: #fff5f5; border-left-color: var(--warning-color); font-style: normal; color: #1a1a1a;">
+                            <strong>Ответ, который мы даем:</strong><br><br>
+                            «Светлана Владимировна, я объясню, почему я говорю так подробно и никуда не спешу. Согласно ведомственной инструкции №14-ФЗ, я сейчас веду аудиофиксацию, которая подшивается к материалам дела в следственный комитет. 
+                            <br><br>
+                            Если я пропущу хотя бы один пункт регламента информирования или зачитаю ваши данные неразборчиво — прокуратура отклонит этот протокол, и аннулирование доверенности будет признано недействительным. 
+                            <br><br>
+                            Я трачу ваше и свое время на эти юридические формулировки исключительно ради того, чтобы у судов потом не было к вам вопросов. Это моя работа. Продолжаем?»
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Возражение 2: Третьи лица -->
+            <div class="objection-item">
+                <div class="objection-header" onclick="toggleObjection(this)">
+                    <span>Возражение: Ссылаются на 3-и лица (юристы, руководство, муж)</span>
+                </div>
+                <div class="objection-content">
+                    <div class="objection-body">
+                        <strong>Суть страха клиента:</strong> Желание переложить ответственность за решение или затянуть процесс.
+                        <div class="script-box" style="font-style: italic;">
+                            <strong>Готовый скрипт:</strong> «Я полностью согласен, что этот вопрос требует согласования. Скажите, а лично вам наше решение подходит? Если мы уберем этот фактор, вас всё устраивает? Давайте я подготовлю аргументы для ваших [юристов/руководства], чтобы сэкономить ваше время».
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= СТРАНИЦА: РОСФИНМОНИТОРИНГ ================= -->
+        <div id="page-rosfin" class="page-section">
+            <h2 class="section-title">Этап: Росфинмониторинг (РФМ)</h2>
+            <p>Специфические возражения, связанные с финансовым контролем, блокировками, 115-ФЗ и проверками документов.</p>
+
+            <!-- Возражение 1 -->
+            <div class="objection-item">
+                <div class="objection-header" onclick="toggleObjection(this)">
+                    <span>Возражение: «Зачем вам столько моих личных/финансовых данных?»</span>
+                </div>
+                <div class="objection-content">
+                    <div class="objection-body">
+                        <strong>Суть страха клиента:</strong> Страх утечки конфиденциальной информации, недоверие.
+                        <div class="script-box" style="font-style: italic;">
+                            <strong>Готовый скрипт:</strong> «Я прекрасно понимаю вашу осторожность. Данные запрашиваются строго в рамках исполнения требований Федерального закона. Мы обеспечиваем шифрование по банковскому стандарту. Без этого пакета ведомство просто отклонит нашу операцию».
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
