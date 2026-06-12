@@ -3,227 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>Шпаргалка · Ответы на возражения и личное развитие</title>
+  <title>Шпаргалка · Ответы на возражения</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      background: #f4f7fc;
-      color: #1e2b3c;
-      line-height: 1.5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      background: #f4f7fc; color: #1e2b3c; line-height: 1.5; min-height: 100vh;
+      display: flex; flex-direction: column;
     }
-
-    .app {
-      max-width: 800px;
-      margin: 0 auto;
-      width: 100%;
-      padding: 1rem;
-      flex: 1;
-    }
-
+    .app { max-width: 800px; margin: 0 auto; width: 100%; padding: 1rem; flex: 1; }
     header {
       background: linear-gradient(135deg, #0b2b4f 0%, #1a3f60 100%);
-      color: white;
-      padding: 1.5rem 1rem 1rem;
-      text-align: center;
-      border-radius: 0 0 2rem 2rem;
-      margin-bottom: 1.25rem;
+      color: white; padding: 1.5rem 1rem 1rem; text-align: center;
+      border-radius: 0 0 2rem 2rem; margin-bottom: 1.25rem;
       box-shadow: 0 8px 20px rgba(0, 40, 70, 0.15);
     }
-
-    header h1 {
-      font-size: 1.7rem;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-      margin-bottom: 0.4rem;
-    }
-
-    header p {
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
-
+    header h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
+    header p { font-size: 0.95rem; opacity: 0.85; }
     .tabs {
-      display: flex;
-      gap: 0.5rem;
-      background: white;
-      padding: 0.5rem;
-      border-radius: 3rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: flex; gap: 0.5rem; background: white; padding: 0.5rem;
+      border-radius: 3rem; box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      margin-bottom: 2rem; flex-wrap: wrap; justify-content: center;
     }
-
     .tab-btn {
-      flex: 1 1 auto;
-      min-width: 100px;
-      background: transparent;
-      border: none;
-      padding: 0.8rem 0.6rem;
-      border-radius: 2.5rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #2c3e50;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.3rem;
-      background: #f0f4fa;
+      flex: 1 1 auto; min-width: 100px; background: #f0f4fa; border: none;
+      padding: 0.8rem 0.6rem; border-radius: 2.5rem; font-weight: 600;
+      font-size: 0.9rem; color: #2c3e50; cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center; gap: 0.3rem;
       white-space: nowrap;
     }
-
-    .tab-btn i {
-      font-style: normal;
-      font-size: 1.1rem;
-    }
-
-    .tab-btn.active {
-      background: #0a3147;
-      color: white;
-      box-shadow: 0 6px 14px rgba(8, 42, 62, 0.3);
-    }
-
-    .page {
-      display: none;
-      animation: fade 0.25s ease;
-    }
-
-    .page.active {
-      display: block;
-    }
-
-    @keyframes fade {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
+    .tab-btn.active { background: #0a3147; color: white; box-shadow: 0 6px 14px rgba(8, 42, 62, 0.3); }
+    .page { display: none; animation: fade 0.25s ease; }
+    .page.active { display: block; }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
     .card {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
-      border: 1px solid rgba(0,0,0,0.02);
+      background: white; border-radius: 1.5rem; padding: 1.5rem; margin-bottom: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02);
     }
-
-    h2 {
-      font-size: 1.6rem;
-      font-weight: 650;
-      margin-bottom: 0.6rem;
-      color: #0b2b4f;
-    }
-
-    .subtitle {
-      color: #3d5a73;
-      margin-bottom: 1.25rem;
-      font-size: 1rem;
-    }
-
+    h2 { font-size: 1.6rem; font-weight: 650; margin-bottom: 0.6rem; color: #0b2b4f; }
+    .subtitle { color: #3d5a73; margin-bottom: 1.25rem; font-size: 1rem; }
     .development-text {
-      background: #e7f3f9;
-      padding: 1.2rem;
-      border-radius: 1rem;
-      color: #153e5a;
-      font-style: italic;
-      border-left: 5px solid #0f6b6b;
+      background: #e7f3f9; padding: 1.2rem; border-radius: 1rem;
+      color: #153e5a; font-style: italic; border-left: 5px solid #0f6b6b;
     }
-
     .objection-item {
-      border: 1px solid #e0e9f2;
-      border-radius: 1.2rem;
-      margin-bottom: 0.8rem;
-      overflow: hidden;
-      background: white;
-      transition: all 0.2s;
+      border: 1px solid #e0e9f2; border-radius: 1.2rem; margin-bottom: 0.8rem;
+      overflow: hidden; background: white; transition: all 0.2s;
     }
-
     .objection-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.25rem;
-      background: #f9fcff;
-      cursor: pointer;
-      user-select: none;
-      font-weight: 600;
-      color: #0b2b4f;
-      border-bottom: 1px solid transparent;
-      transition: background 0.15s;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 1.25rem; background: #f9fcff; cursor: pointer;
+      user-select: none; font-weight: 600; color: #0b2b4f;
+      border-bottom: 1px solid transparent; transition: background 0.15s;
     }
-
-    .objection-header:hover {
-      background: #ecf5fc;
-    }
-
-    .objection-header .arrow {
-      font-size: 1.2rem;
-      transition: transform 0.25s ease;
-      color: #0f6b6b;
-    }
-
-    .objection-body {
-      display: none;
-      padding: 1rem 1.25rem 1.25rem;
-      background: #ffffff;
-      border-top: 1px solid #e6edf6;
-      color: #2b3e52;
-    }
-
-    .objection-body.open {
-      display: block;
-    }
-
+    .objection-header:hover { background: #ecf5fc; }
+    .objection-header .arrow { font-size: 1.2rem; transition: transform 0.25s ease; color: #0f6b6b; }
+    .objection-body { display: none; padding: 1rem 1.25rem 1.25rem; background: #ffffff; border-top: 1px solid #e6edf6; color: #2b3e52; }
+    .objection-body.open { display: block; }
     .situation {
-      background: #f4f9ff;
-      padding: 0.8rem 1rem;
-      border-radius: 0.8rem;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-      color: #1e3b4f;
+      background: #f4f9ff; padding: 0.8rem 1rem; border-radius: 0.8rem;
+      margin-bottom: 1rem; font-size: 0.95rem; color: #1e3b4f;
       border-left: 4px solid #0b6b6b;
     }
-
     .script-box {
-      background: #112e44;
-      color: #e9f3fa;
-      padding: 1.2rem;
-      border-radius: 1rem;
-      font-family: 'Courier New', monospace;
-      font-size: 0.92rem;
-      line-height: 1.65;
-      white-space: pre-wrap;
-      word-break: break-word;
-      border: 1px solid #2a5268;
-      box-shadow: 0 6px 14px rgba(0,20,30,0.2);
-      margin-top: 0.5rem;
+      background: #112e44; color: #e9f3fa; padding: 1.2rem; border-radius: 1rem;
+      font-family: 'Courier New', monospace; font-size: 0.92rem; line-height: 1.65;
+      white-space: pre-wrap; word-break: break-word; border: 1px solid #2a5268;
+      box-shadow: 0 6px 14px rgba(0,20,30,0.2); margin-top: 0.5rem;
     }
-
-    .footer-note {
-      text-align: center;
-      margin-top: 2rem;
-      color: #6b7c8b;
-      font-size: 0.8rem;
-    }
-
+    .footer-note { text-align: center; margin-top: 2rem; color: #6b7c8b; font-size: 0.8rem; }
     @media (max-width: 500px) {
-      .app {
-        padding: 0.75rem;
-      }
-      .tab-btn {
-        font-size: 0.8rem;
-        padding: 0.7rem 0.4rem;
-      }
+      .app { padding: 0.75rem; }
+      .tab-btn { font-size: 0.8rem; padding: 0.7rem 0.4rem; }
     }
   </style>
 </head>
@@ -233,194 +84,105 @@
       <h1>🛡️ Ответы на возражения</h1>
       <p>Личное развитие · скрипты · уверенность</p>
     </header>
-
-    <nav class="tabs" id="tabNavigation">
-      <button class="tab-btn active" data-page="home">🏠 Главная</button>
-      <button class="tab-btn" data-page="roskomnadzor">🛡️ Роскомнадзор</button>
-      <button class="tab-btn" data-page="rosfinmonitoring">💼 Росфинмониторинг</button>
-    </nav>
-
-    <!-- Главная -->
-    <div id="page-home" class="page active">
-      <div class="card">
-        <h2>Добро пожаловать в базу знаний</h2>
-        <p class="subtitle">Работа с сомнениями — это путь к росту</p>
-        <div class="development-text">
-          <strong>Личное развитие:</strong> Возражение — это не отказ, а страх клиента. 
-          Сохраняйте спокойствие и превращайте сопротивление в диалог. Каждый сложный разговор делает вас сильнее.
-        </div>
-      </div>
-    </div>
-
-    <!-- Роскомнадзор -->
-    <div id="page-roskomnadzor" class="page">
-      <div class="card">
-        <h2>🛡️ Роскомнадзор</h2>
-        <p class="subtitle">Регламент, сроки, доверие</p>
-
-        <!-- Возражение 1 (исходное) -->
-        <div class="objection-item">
-          <div class="objection-header" data-target="obj-rkn-1">
-            <span>⚡ Клиент думает, что тянут время / Почему так долго?</span>
-            <span class="arrow">▼</span>
-          </div>
-          <div id="obj-rkn-1" class="objection-body">
-            <div class="situation">
-              <strong>Суть ситуации:</strong> Клиент торопится или не понимает важности регламента.
-            </div>
-            <div class="script-box">
-              «Светлана Владимировна, я объясню, почему я говорю так подробно и никуда не спешу. Согласно ведомственной инструкции №14-ФЗ, я сейчас веду аудиофиксацию, которая подшивается к материалам дела в следственный комитет. Если я пропущу хотя бы один пункт регламента информирования или зачитаю ваши данные неразборчиво — прокуратура отклонит этот протокол, и аннулирование доверенности будет признано недействительным. Я трачу ваше и свое время на эти юридические формулировки исключительно ради того, чтобы у судов потом не было к вам вопросов. Это моя работа. Продолжаем?»
-            </div>
-          </div>
-        </div>
-
-        <!-- НОВОЕ ВОЗРАЖЕНИЕ: Сомнения на старте -->
-        <div class="objection-item">
-          <div class="objection-header" data-target="obj-rkn-s1">
-            <span>🤔 Сомнения на старте</span>
-            <span class="arrow">▼</span>
-          </div>
-          <div id="obj-rkn-s1" class="objection-body">
-            <div class="situation">
-              <strong>Суть ситуации:</strong> Клиент не верит звонящему, боится мошенничества, общее недоверие.
-            </div>
-            <div class="script-box">
-              «Светлана Владимировна, вы абсолютно правы, и я вас прекрасно понимаю. Было бы странно, если бы вы в такой ситуации сразу верили на слово первому встречному по телефону. Сейчас столько обмана вокруг, что излишняя доверчивость как раз и приводит к потере денег. То, что вы сомневаетесь и задаете правильные вопросы, — это нормальная, здоровая реакция человека, который хочет защитить себя. Именно поэтому я не прошу у вас никаких карт, паролей или личных данных (p. 2, PDF: 0.1.1). Моя задача как инспектора — не уговорить вас, а технически помочь остановить несанкционированные действия (p. 2, PDF: 0.1.1). Давайте мы без лишней спешки, спокойно, шаг за шагом закроем эту мошенническую сессию, чтобы вы были абсолютно уверены в безопасности своих документов (p. 2, PDF: 0.1.1). Хорошо?»
-            </div>
-          </div>
-        </div>
-
-        <!-- НОВОЕ ВОЗРАЖЕНИЕ: Отработка вопроса про мобильный номер -->
-        <div class="objection-item">
-          <div class="objection-header" data-target="obj-rkn-s2">
-            <span>📱 Отработка вопроса про «мобильный номер»</span>
-            <span class="arrow">▼</span>
-          </div>
-          <div id="obj-rkn-s2" class="objection-body">
-            <div class="situation">
-              <strong>Суть ситуации:</strong> Клиент спрашивает, почему звонят с мобильного, а не с городского номера.
-            </div>
-            <div class="script-box">
-              «Людмила Валентиновна, согласно внутреннему приказу Роскомнадзора №402 о защите сотрудников, в условиях массовых хакерских атак на стационарные АТС ведомства, все оперативные дежурные переведены на защищенные виртуальные рабочие места с шифрованием шлюза. Звонки на личные телефоны граждан с городских номеров сейчас технически заблокированы во избежание подмены номера со стороны Украины.»
-            </div>
-          </div>
-        </div>
-
-        <!-- НОВОЕ ВОЗРАЖЕНИЕ: Информация о вине передачи СМС-кода -->
-        <div class="objection-item">
-          <div class="objection-header" data-target="obj-rkn-s3">
-            <span>⚠️ Информация о вине передачи СМС-кода</span>
-            <span class="arrow">▼</span>
-          </div>
-          <div id="obj-rkn-s3" class="objection-body">
-            <div class="situation">
-              <strong>Суть ситуации:</strong> Клиент утверждает, что не передавал код, но система зафиксировала обратное.
-            </div>
-            <div class="script-box">
-              «Ольга Николаевна, я прекрасно слышу, что вы этого не делали, и я вам верю как человеку (PDF: 0.1.11). Но поймите: я сейчас смотрю не на вас, я смотрю в технический лог системы безопасности Минцифры (PDF: 0.1.1). Для автоматической системы взлом выглядит как ваше личное, добровольное действие. Почему? Потому что одноразовый СМС-идентификатор генерируется сотовой вышкой только на вашу физическую сим-карту (PDF: 0.1.1). Перехватить его по воздуху невозможно. Система зафиксировала: код был отправлен Ольге Николаевне, и Ольга Николаевна лично ввела/озвучила эти четыре цифры 1265 (PDF: 0.1.1). То, что вас обманули про домофон — это бытовой фактор (p. 8, PDF: 0.1.1). Но юридически, из-за того, что вы проявили техническую халатность и передали этот ключ, мошенники смогли сгенерировать ЭЦП (p. 3, PDF: 0.1.1). Для закона виновник этой уязвимости — держатель телефона (p. 9, PDF: 0.1.8). И если мы сейчас под аудиопротокол не зафиксируем, что этот ввод кода был следствием обмана, вы по документам останетесь человеком, который добровольно выписал доверенность экстремисту (p. 10, PDF: 0.1.7). Вы понимаете, что спорить с компьютером бесполезно? Нам нужно исправлять вашу ошибку».»
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Росфинмониторинг -->
-    <div id="page-rosfinmonitoring" class="page">
-      <div class="card">
-        <h2>💼 Росфинмониторинг</h2>
-        <p class="subtitle">115-ФЗ, безопасность, прозрачность</p>
-
-        <div class="objection-item">
-          <div class="objection-header" data-target="obj-rfm-1">
-            <span>🔐 «Зачем вам столько моих личных/финансовых данных?»</span>
-            <span class="arrow">▼</span>
-          </div>
-          <div id="obj-rfm-1" class="objection-body">
-            <div class="situation">
-              <strong>Суть ситуации:</strong> Опасения о конфиденциальности и границах запроса.
-            </div>
-            <div class="script-box">
-              «Я прекрасно понимаю вашу осторожность. Данные запрашиваются строго в рамках 115-ФЗ для идентификации и предотвращения незаконных операций. Вся информация защищена и используется только в целях compliance. Это стандартная процедура, которая защищает в том числе и вас.»
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-note">
-      © 2026 · шпаргалка для уверенных ответов
-    </div>
+    <nav class="tabs" id="tabNavigation"></nav>
+    <div id="pagesContainer"></div>
+    <div class="footer-note">© 2026 · шпаргалка для уверенных ответов</div>
   </div>
 
   <script>
     (function() {
-      const tabs = document.querySelectorAll('.tab-btn');
-      const pages = {
-        home: document.getElementById('page-home'),
-        roskomnadzor: document.getElementById('page-roskomnadzor'),
-        rosfinmonitoring: document.getElementById('page-rosfinmonitoring')
-      };
+      const pagesContainer = document.getElementById('pagesContainer');
+      const tabNav = document.getElementById('tabNavigation');
 
-      function switchToPage(pageId) {
-        Object.values(pages).forEach(page => {
-          if (page) page.classList.remove('active');
-        });
-        const activePage = pages[pageId];
-        if (activePage) {
-          activePage.classList.add('active');
+      // Функция создания страницы
+      function createPage(pageId, title, subtitle, objections) {
+        const pageDiv = document.createElement('div');
+        pageDiv.id = `page-${pageId}`;
+        pageDiv.className = 'page';
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<h2>${title}</h2><p class="subtitle">${subtitle || ''}</p>`;
+        
+        if (pageId === 'home') {
+          // Особый блок для главной
+          const devBlock = document.createElement('div');
+          devBlock.className = 'development-text';
+          devBlock.innerHTML = '<strong>Личное развитие:</strong> Возражение — это не отказ, а страх клиента. Сохраняйте спокойствие и превращайте сопротивление в диалог. Каждый сложный разговор делает вас сильнее.';
+          card.appendChild(devBlock);
+        } else if (objections && objections.length > 0) {
+          objections.forEach(obj => {
+            const item = document.createElement('div');
+            item.className = 'objection-item';
+            item.innerHTML = `
+              <div class="objection-header" data-target="obj-${pageId}-${obj.id}">
+                <span>${obj.title}</span>
+                <span class="arrow">▼</span>
+              </div>
+              <div id="obj-${pageId}-${obj.id}" class="objection-body">
+                <div class="situation"><strong>Суть ситуации:</strong> ${obj.situation}</div>
+                <div class="script-box">${obj.script.replace(/\n/g, '<br>')}</div>
+              </div>
+            `;
+            card.appendChild(item);
+          });
         }
-        tabs.forEach(btn => {
-          const btnPage = btn.getAttribute('data-page');
-          if (btnPage === pageId) {
-            btn.classList.add('active');
-          } else {
-            btn.classList.remove('active');
-          }
+        pageDiv.appendChild(card);
+        return pageDiv;
+      }
+
+      // Функция переключения страниц
+      function switchToPage(pageId) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        const activePage = document.getElementById(`page-${pageId}`);
+        if (activePage) activePage.classList.add('active');
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.page === pageId);
         });
       }
 
-      tabs.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          const pageId = this.getAttribute('data-page');
-          if (pageId) {
-            switchToPage(pageId);
-          }
-        });
-      });
+      // Загрузка данных из data.json
+      fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          // Создаём вкладки и страницы
+          const pages = data.pages || [];
+          pages.forEach((page, index) => {
+            const tabBtn = document.createElement('button');
+            tabBtn.className = 'tab-btn';
+            tabBtn.dataset.page = page.id;
+            tabBtn.innerHTML = page.icon ? `${page.icon} ${page.title}` : page.title;
+            tabBtn.addEventListener('click', function() {
+              switchToPage(page.id);
+            });
+            tabNav.appendChild(tabBtn);
 
-      const objectionHeaders = document.querySelectorAll('.objection-header');
-      objectionHeaders.forEach(header => {
-        header.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('data-target');
-          if (!targetId) return;
-          const body = document.getElementById(targetId);
-          if (!body) return;
-          body.classList.toggle('open');
-          const arrow = this.querySelector('.arrow');
-          if (arrow) {
-            if (body.classList.contains('open')) {
-              arrow.style.transform = 'rotate(180deg)';
-            } else {
-              arrow.style.transform = 'rotate(0deg)';
-            }
-          }
-        });
-      });
+            const pageEl = createPage(page.id, page.title, page.subtitle, page.objections);
+            pagesContainer.appendChild(pageEl);
+          });
 
-      objectionHeaders.forEach(header => {
-        const targetId = header.getAttribute('data-target');
-        if (targetId) {
-          const body = document.getElementById(targetId);
-          const arrow = header.querySelector('.arrow');
-          if (body && arrow) {
-            if (body.classList.contains('open')) {
-              arrow.style.transform = 'rotate(180deg)';
-            } else {
-              arrow.style.transform = 'rotate(0deg)';
-            }
+          // Активируем первую страницу
+          if (pages.length > 0) {
+            switchToPage(pages[0].id);
           }
-        }
-      });
+
+          // Делегирование для аккордеонов
+          pagesContainer.addEventListener('click', function(e) {
+            const header = e.target.closest('.objection-header');
+            if (!header) return;
+            const targetId = header.dataset.target;
+            const body = document.getElementById(targetId);
+            if (!body) return;
+            body.classList.toggle('open');
+            const arrow = header.querySelector('.arrow');
+            if (arrow) {
+              arrow.style.transform = body.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+          });
+        })
+        .catch(err => {
+          pagesContainer.innerHTML = '<div class="card"><p>⚠️ Не удалось загрузить данные. Проверьте файл data.json.</p></div>';
+          console.error(err);
+        });
     })();
   </script>
 </body>
