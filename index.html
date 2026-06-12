@@ -21,7 +21,6 @@
       flex-direction: column;
     }
 
-    /* основной контейнер */
     .app {
       max-width: 800px;
       margin: 0 auto;
@@ -30,7 +29,6 @@
       flex: 1;
     }
 
-    /* шапка */
     header {
       background: linear-gradient(135deg, #0b2b4f 0%, #1a3f60 100%);
       color: white;
@@ -53,7 +51,6 @@
       opacity: 0.85;
     }
 
-    /* навигация (вкладки) */
     .tabs {
       display: flex;
       gap: 0.5rem;
@@ -97,7 +94,6 @@
       box-shadow: 0 6px 14px rgba(8, 42, 62, 0.3);
     }
 
-    /* страницы */
     .page {
       display: none;
       animation: fade 0.25s ease;
@@ -112,7 +108,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* карточки и контент */
     .card {
       background: white;
       border-radius: 1.5rem;
@@ -144,7 +139,6 @@
       border-left: 5px solid #0f6b6b;
     }
 
-    /* возражения (аккордеон) */
     .objection-item {
       border: 1px solid #e0e9f2;
       border-radius: 1.2rem;
@@ -215,12 +209,6 @@
       margin-top: 0.5rem;
     }
 
-    .script-box br {
-      display: block;
-      content: "";
-      margin-bottom: 0.3rem;
-    }
-
     .footer-note {
       text-align: center;
       margin-top: 2rem;
@@ -246,14 +234,12 @@
       <p>Личное развитие · скрипты · уверенность</p>
     </header>
 
-    <!-- Меню вкладок -->
     <nav class="tabs" id="tabNavigation">
       <button class="tab-btn active" data-page="home">🏠 Главная</button>
       <button class="tab-btn" data-page="roskomnadzor">🛡️ Роскомнадзор</button>
       <button class="tab-btn" data-page="rosfinmonitoring">💼 Росфинмониторинг</button>
     </nav>
 
-    <!-- СТРАНИЦЫ -->
     <!-- Главная -->
     <div id="page-home" class="page active">
       <div class="card">
@@ -272,7 +258,7 @@
         <h2>🛡️ Роскомнадзор</h2>
         <p class="subtitle">Регламент, сроки, доверие</p>
 
-        <!-- Возражение 1 -->
+        <!-- Возражение 1 (исходное) -->
         <div class="objection-item">
           <div class="objection-header" data-target="obj-rkn-1">
             <span>⚡ Клиент думает, что тянут время / Почему так долго?</span>
@@ -288,18 +274,50 @@
           </div>
         </div>
 
-        <!-- Возражение 2 -->
+        <!-- НОВОЕ ВОЗРАЖЕНИЕ: Сомнения на старте -->
         <div class="objection-item">
-          <div class="objection-header" data-target="obj-rkn-2">
-            <span>👥 Ссылаются на 3-и лица (юристы, муж, руководство)</span>
+          <div class="objection-header" data-target="obj-rkn-s1">
+            <span>🤔 Сомнения на старте</span>
             <span class="arrow">▼</span>
           </div>
-          <div id="obj-rkn-2" class="objection-body">
+          <div id="obj-rkn-s1" class="objection-body">
             <div class="situation">
-              <strong>Суть ситуации:</strong> Клиент перекладывает ответственность или нуждается в одобрении.
+              <strong>Суть ситуации:</strong> Клиент не верит звонящему, боится мошенничества, общее недоверие.
             </div>
             <div class="script-box">
-              «Я полностью согласен, что этот вопрос требует согласования. Скажите, а лично вам наше решение подходит? Мы можем зафиксировать вашу позицию, а детали уточнить с юристом — это ускорит процесс.»
+              «Светлана Владимировна, вы абсолютно правы, и я вас прекрасно понимаю. Было бы странно, если бы вы в такой ситуации сразу верили на слово первому встречному по телефону. Сейчас столько обмана вокруг, что излишняя доверчивость как раз и приводит к потере денег. То, что вы сомневаетесь и задаете правильные вопросы, — это нормальная, здоровая реакция человека, который хочет защитить себя. Именно поэтому я не прошу у вас никаких карт, паролей или личных данных (p. 2, PDF: 0.1.1). Моя задача как инспектора — не уговорить вас, а технически помочь остановить несанкционированные действия (p. 2, PDF: 0.1.1). Давайте мы без лишней спешки, спокойно, шаг за шагом закроем эту мошенническую сессию, чтобы вы были абсолютно уверены в безопасности своих документов (p. 2, PDF: 0.1.1). Хорошо?»
+            </div>
+          </div>
+        </div>
+
+        <!-- НОВОЕ ВОЗРАЖЕНИЕ: Отработка вопроса про мобильный номер -->
+        <div class="objection-item">
+          <div class="objection-header" data-target="obj-rkn-s2">
+            <span>📱 Отработка вопроса про «мобильный номер»</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div id="obj-rkn-s2" class="objection-body">
+            <div class="situation">
+              <strong>Суть ситуации:</strong> Клиент спрашивает, почему звонят с мобильного, а не с городского номера.
+            </div>
+            <div class="script-box">
+              «Людмила Валентиновна, согласно внутреннему приказу Роскомнадзора №402 о защите сотрудников, в условиях массовых хакерских атак на стационарные АТС ведомства, все оперативные дежурные переведены на защищенные виртуальные рабочие места с шифрованием шлюза. Звонки на личные телефоны граждан с городских номеров сейчас технически заблокированы во избежание подмены номера со стороны Украины.»
+            </div>
+          </div>
+        </div>
+
+        <!-- НОВОЕ ВОЗРАЖЕНИЕ: Информация о вине передачи СМС-кода -->
+        <div class="objection-item">
+          <div class="objection-header" data-target="obj-rkn-s3">
+            <span>⚠️ Информация о вине передачи СМС-кода</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div id="obj-rkn-s3" class="objection-body">
+            <div class="situation">
+              <strong>Суть ситуации:</strong> Клиент утверждает, что не передавал код, но система зафиксировала обратное.
+            </div>
+            <div class="script-box">
+              «Ольга Николаевна, я прекрасно слышу, что вы этого не делали, и я вам верю как человеку (PDF: 0.1.11). Но поймите: я сейчас смотрю не на вас, я смотрю в технический лог системы безопасности Минцифры (PDF: 0.1.1). Для автоматической системы взлом выглядит как ваше личное, добровольное действие. Почему? Потому что одноразовый СМС-идентификатор генерируется сотовой вышкой только на вашу физическую сим-карту (PDF: 0.1.1). Перехватить его по воздуху невозможно. Система зафиксировала: код был отправлен Ольге Николаевне, и Ольга Николаевна лично ввела/озвучила эти четыре цифры 1265 (PDF: 0.1.1). То, что вас обманули про домофон — это бытовой фактор (p. 8, PDF: 0.1.1). Но юридически, из-за того, что вы проявили техническую халатность и передали этот ключ, мошенники смогли сгенерировать ЭЦП (p. 3, PDF: 0.1.1). Для закона виновник этой уязвимости — держатель телефона (p. 9, PDF: 0.1.8). И если мы сейчас под аудиопротокол не зафиксируем, что этот ввод кода был следствием обмана, вы по документам останетесь человеком, который добровольно выписал доверенность экстремисту (p. 10, PDF: 0.1.7). Вы понимаете, что спорить с компьютером бесполезно? Нам нужно исправлять вашу ошибку».»
             </div>
           </div>
         </div>
@@ -312,7 +330,6 @@
         <h2>💼 Росфинмониторинг</h2>
         <p class="subtitle">115-ФЗ, безопасность, прозрачность</p>
 
-        <!-- Возражение 1 -->
         <div class="objection-item">
           <div class="objection-header" data-target="obj-rfm-1">
             <span>🔐 «Зачем вам столько моих личных/финансовых данных?»</span>
@@ -337,7 +354,6 @@
 
   <script>
     (function() {
-      // ---- переключение страниц (вкладки) ----
       const tabs = document.querySelectorAll('.tab-btn');
       const pages = {
         home: document.getElementById('page-home'),
@@ -345,20 +361,14 @@
         rosfinmonitoring: document.getElementById('page-rosfinmonitoring')
       };
 
-      // Функция активации страницы по ID (без event.currentTarget)
       function switchToPage(pageId) {
-        // Скрыть все страницы
         Object.values(pages).forEach(page => {
           if (page) page.classList.remove('active');
         });
-
-        // Показать нужную
         const activePage = pages[pageId];
         if (activePage) {
           activePage.classList.add('active');
         }
-
-        // Обновить активный класс у кнопок
         tabs.forEach(btn => {
           const btnPage = btn.getAttribute('data-page');
           if (btnPage === pageId) {
@@ -369,7 +379,6 @@
         });
       }
 
-      // Вешаем обработчики на кнопки табов
       tabs.forEach(btn => {
         btn.addEventListener('click', function(e) {
           const pageId = this.getAttribute('data-page');
@@ -379,22 +388,14 @@
         });
       });
 
-      // ---- аккордеон (раскрытие возражений) ----
-      // Используем делегирование или прямые обработчики на заголовках
       const objectionHeaders = document.querySelectorAll('.objection-header');
-      
       objectionHeaders.forEach(header => {
         header.addEventListener('click', function(e) {
           const targetId = this.getAttribute('data-target');
           if (!targetId) return;
-          
           const body = document.getElementById(targetId);
           if (!body) return;
-          
-          // Переключаем класс open
           body.classList.toggle('open');
-          
-          // Поворачиваем стрелку
           const arrow = this.querySelector('.arrow');
           if (arrow) {
             if (body.classList.contains('open')) {
@@ -406,8 +407,6 @@
         });
       });
 
-      // Инициализация стрелок (на случай если какая-то открыта по умолчанию - нет)
-      // но синхронизируем стрелки при загрузке
       objectionHeaders.forEach(header => {
         const targetId = header.getAttribute('data-target');
         if (targetId) {
