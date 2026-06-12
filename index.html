@@ -247,4 +247,41 @@
         </div>
 
     </div>
+<script>
+function switchPage(pageId, button) {
 
+    document.querySelectorAll('.page-section').forEach(section => {
+        section.classList.remove('active');
+    });
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    const page = document.getElementById('page-' + pageId);
+
+    if (page) {
+        page.classList.add('active');
+    }
+
+    button.classList.add('active');
+}
+
+function toggleObjection(header) {
+
+    const currentItem = header.parentElement;
+
+    if (!currentItem) return;
+
+    document.querySelectorAll('.objection-item').forEach(item => {
+        if (item !== currentItem) {
+            item.classList.remove('open');
+        }
+    });
+
+    currentItem.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
