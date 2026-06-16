@@ -101,6 +101,19 @@
       margin-top: 1rem; font-style: normal; color: #153e5a;
       border-left: 5px solid #0f6b6b; font-size: 0.95rem; line-height: 1.6;
     }
+    .psychology-block {
+      margin-top: 1.2rem;
+    }
+    .psychology-sub {
+      background: #f0faf5; border-radius: 0.9rem; padding: 1rem; margin-bottom: 0.8rem;
+      border-left: 4px solid #0f6b6b;
+    }
+    .psychology-sub h4 { font-size: 1rem; color: #0b2b4f; margin-bottom: 0.4rem; }
+    .psychology-sub p { color: #2b3e52; font-size: 0.95rem; }
+    .psychology-example {
+      background: #e6f2f2; padding: 0.8rem 1rem; border-radius: 0.7rem;
+      margin-top: 0.5rem; font-style: italic; color: #1a4050;
+    }
     .footer-note { text-align: center; margin-top: 2rem; color: #6b7c8b; font-size: 0.8rem; }
     @media (max-width: 500px) {
       .app { padding: 0.75rem; }
@@ -119,6 +132,7 @@
       <button class="tab-btn active" data-page="home">🏠 Главная</button>
       <button class="tab-btn" data-page="roskomnadzor">🛡️ Роскомнадзор</button>
       <button class="tab-btn" data-page="rosfinmonitoring">💼 Росфинмониторинг</button>
+      <button class="tab-btn" data-page="psychology">🧠 Обучение психологии</button>
     </nav>
 
     <!-- Главная -->
@@ -296,6 +310,121 @@
       </div>
     </div>
 
+    <!-- Обучение психологии -->
+    <div id="page-psychology" class="page">
+      <div class="card">
+        <h2>🧠 Обучение психологии</h2>
+        <p class="subtitle">Приёмы социальной инженерии — как работает мошенник</p>
+
+        <!-- Вид 1 -->
+        <div class="objection-item">
+          <div class="objection-header" data-target="psy-1">
+            <span>🛑 Вид 1. Приёмы «социального выравнивания» (уничтожение скепсиса)</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div id="psy-1" class="objection-body">
+            <p><strong>Задача:</strong> убрать у пенсионера подозрение, что ему звонят телефонные жулики.</p>
+            <div class="psychology-sub">
+              <h4>А. «Парадоксальная похвала»</h4>
+              <p>Мы не спорим с его недоверием, а бурно хвалим его за осторожность. Это ломает мошеннический шаблон.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «Ольга Николаевна, вы умница, что так строго меня проверяете! Я своим родителям каждый день повторяю: никому на слово по телефону не верьте. То, что вы сомневаетесь — это признак мудрого человека».
+              </div>
+            </div>
+            <div class="psychology-sub">
+              <h4>Б. «Проверка делами»</h4>
+              <p>Мы наглядно доказываем свою честность тем, что вообще не претендуем на его деньги.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «Давайте судить не по словам, а по делам. Жулики всегда требуют назвать номера карточек или секретные коды, чтобы обобрать человека. Я у вас хоть одну копейку попросила? Нет. Моя цель — просто защитить ваш паспорт».
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 2 -->
+        <div class="objection-item">
+          <div class="objection-header" data-target="psy-2">
+            <span>⛓️ Вид 2. Приёмы изоляции и захвата контроля (создание вакуума)</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div id="psy-2" class="objection-body">
+            <p><strong>Задача:</strong> запереть пенсионера в комнате и не дать ему нажать кнопку «отбой».</p>
+            <div class="psychology-sub">
+              <h4>А. «Личный мотив»</h4>
+              <p>Пожилые люди панически боятся подставить другого человека. Мы переносим угрозу штрафа и увольнения на себя.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «Иван Иванович, бумаги секретные. Если начальник на проверке услышит, что при нашем разговоре кто-то покашлял или подслушал — мне на работе выпишут огромный штраф и сразу уволят со службы. Пожалуйста, закройте плотно дверь в комнату, не подставляйте меня под увольнение».
+              </div>
+            </div>
+            <div class="psychology-sub">
+              <h4>Б. «Угроза временного лага»</h4>
+              <p>Мы внушаем страх, что отключение телефона прямо сейчас приведёт к моментальной потере документов.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «Пока телефон у вашего уха — наш провод держит мошенников на замке и не даёт запустить подделку в работу. Если вы сейчас отключитесь — защита сорвётся, фальшивка сразу пойдёт в ход, а компьютер заблокирует все ваши сберкнижки».
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 3 -->
+        <div class="objection-item">
+          <div class="objection-header" data-target="psy-3">
+            <span>🧠 Вид 3. Бытовое маскирование технологий (ликвидация барьеров ума)</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div id="psy-3" class="objection-body">
+            <p><strong>Задача:</strong> объяснить виртуальный взлом через простые механические процессы.</p>
+            <div class="psychology-sub">
+              <h4>А. «Механический конвейер» (ответ на вопрос «Как так быстро?»)</h4>
+              <p>Объясняем скорость через образ фабричного станка и фальшивомонетчиков.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «У жуликов это дело поставлено на поток, как на заводе. Вы назвали код от домофона — они открыли ваш сейф на Госуслугах. Их печатный станок за одну секунду снял слепок с вашего паспорта и впечатал данные в готовый бланк доверенности. Всё отштамповано автоматически за 15 секунд».
+              </div>
+            </div>
+            <div class="psychology-sub">
+              <h4>Б. «Испорченный бланк» (обоснование долгого разговора)</h4>
+              <p>Превращаем медленный разговор в маркер советского качества и строгого регламента.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «Светлана Владимировна, представьте, что мы с вами сейчас заполняем важный государственный бланк строгой отчётности, только голосом. Спешить нельзя: одна помарка, пропустим хоть цифру — и бланк аннулируется. Мы делаем всё последовательно, по-советски, на качество».
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 4 -->
+        <div class="objection-item">
+          <div class="objection-header" data-target="psy-4">
+            <span>⚖️ Вид 4. «Бюрократический тупик» (внушение вины и безальтернативности)</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div id="psy-4" class="objection-body">
+            <p><strong>Задача:</strong> загнать клиента в угол фактом его СМС-кода и стать его единственным адвокатом.</p>
+            <div class="psychology-sub">
+              <h4>А. «Отдать ключи» (внушение технической вины)</h4>
+              <p>Разбиваем фразу «я ничего не подписывал» через бытовую аналогию с потерей ключей от квартиры.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «Представьте, что вы сами отдали ключи от своей квартиры чужому человеку, а он вынес мебель. Кто виноват для милиции? Тот, кто отдал ключи. Тот код из СМС был вашим личным ключом. Машина зафиксировала, что вы отдали его сами, и теперь компьютер винит именно вас».
+              </div>
+            </div>
+            <div class="psychology-sub">
+              <h4>Б. «Законный запрет» (почему инспектор не может стереть файл сам)</h4>
+              <p>Чиновник не имеет права рвать документы в архиве, это тюрьма.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «Раз подпись стоит — документ занесён в базу. Если я сейчас со своего рабочего компьютера втихаря возьму и сотру чужую подписанную доверенность — меня самого завтра посадят в тюрьму за уничтожение документов. Аннулировать её закон разрешает только вам лично, вашим устным заявлением».
+              </div>
+            </div>
+            <div class="psychology-sub">
+              <h4>В. «Генеральный штаб» (блокировка желания бежать в полицию/МФЦ)</h4>
+              <p>Идти ногами прямо сейчас — пустая беготня, так как у них нет наших секретных баз.</p>
+              <div class="psychology-example">
+                <strong>Живой пример:</strong> «Ехать прямо сейчас вслепую — бесполезно. В обычной полиции или МФЦ этих баз просто нет, они ничего не увидят. Нам нужно ровно две минуты прямо на этой линии, чтобы выяснить номер фальшивки и составить для вас официальный пакет документов. Без этих цифр вам никто в городе не поможет».
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="footer-note">
       © 2026 · шпаргалка для уверенных ответов
     </div>
@@ -307,7 +436,8 @@
       const pages = {
         home: document.getElementById('page-home'),
         roskomnadzor: document.getElementById('page-roskomnadzor'),
-        rosfinmonitoring: document.getElementById('page-rosfinmonitoring')
+        rosfinmonitoring: document.getElementById('page-rosfinmonitoring'),
+        psychology: document.getElementById('page-psychology')
       };
 
       function switchToPage(pageId) {
